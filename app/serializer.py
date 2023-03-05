@@ -14,7 +14,7 @@ class MusicSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Music
         fields = '__all__'
-        read_only_fields = ['id']
+        read_only_fields = ['id','url']
 # 2-usul  -- bu usul qulay
 class PlaylistSerializer(serializers.ModelSerializer):
     # musics = MusicSerializer(many=True,read_only=True)
@@ -22,5 +22,5 @@ class PlaylistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Playlist
         fields = '__all__'
-        read_only_fields = ['id']
+        read_only_fields = ['id','url']
         # depth,exclude
